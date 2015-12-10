@@ -60,6 +60,7 @@ extern RGB _FBHSB2RGB(HSB hsb)
     case 3: r = p, g = q, b = hsb.brightness; break;
     case 4: r = t, g = p, b = hsb.brightness; break;
     case 5: r = hsb.brightness, g = p, b = q; break;
+    default: r = 0, g = 0, b = 0; break;
   }
 
   return (RGB){.red = r, .green = g, .blue = b, .alpha = hsb.alpha};
